@@ -8,10 +8,11 @@ class Solution {
              temp[j++] = nums[i];
         } }
         for(int i = 0;i<j;i++){
-            nums[i] = temp[i];
+            nums[i] = temp[i]; //Copy Back to Original Array
+                               //Copy only non-zero elements back
         }
         for(int i = j;i<n;i++){
-            nums[i] = 0;
+            nums[i] = 0; //Fill rest positions with 0
         }
     }
     }
