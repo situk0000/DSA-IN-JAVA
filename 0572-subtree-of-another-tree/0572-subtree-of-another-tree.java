@@ -22,7 +22,7 @@ class Solution {
             return true;
         }
 
-        return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
+        return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot); //“Agar subtree current node par nahi mili, to kya wo left subtree me hai ya right subtree me hai?”
     }
     private boolean isSameTree(TreeNode p , TreeNode q){
         if(p == null && q == null) return true;
