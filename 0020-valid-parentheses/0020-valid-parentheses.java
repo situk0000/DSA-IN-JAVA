@@ -10,7 +10,7 @@ class Solution {
 
                char top = stack.pop();
                //check matching
-               if( (ch == ')' && top != '(' )|| ( ch == '}' && top != '{') || (ch == ']' && top != '[')){
+               if( (ch == ')' && top != '(') || ( ch == '}' && top != '{') || (ch == ']' && top != '[')){
                return false;
                }
             }
@@ -36,6 +36,7 @@ class Solution {
 👉 Mismatch hone par:
 
 return false;
+
 🔥 Correct pattern:
 if((ch == ')' && top != '(') ||
    (ch == '}' && top != '{') ||
@@ -46,6 +47,6 @@ if((ch == ')' && top != '(') ||
 👉 Aur loop ke baad:
 
 return stack.isEmpty();
-⚡ Simple line me samajh lo:
 
+⚡ Simple line me samajh lo:
 👉 “Ek match se valid nahi hota, sab match hone chahiye” */
