@@ -15,7 +15,7 @@ totalsum+=num;
 
     int l = 0;
     int sum = 0;
-   int mincnt = -1;
+   int maxlen = -1;
     for(int r = 0;r<n;r++){
         sum+=nums[r];
         while(l<=r && sum>target){
@@ -23,15 +23,15 @@ totalsum+=num;
             l++;
         }
         if(target == sum){
-            mincnt = Math.max(mincnt,r-l+1);
+            maxlen = Math.max(maxlen,r-l+1);
         }
     }
-        if(mincnt == -1){
+        if(maxlen == -1){
         return -1;
 
     }
 
-    return n-mincnt;
+    return n-maxlen;
 
     }
 }
